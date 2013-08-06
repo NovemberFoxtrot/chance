@@ -1,14 +1,9 @@
 package chance
 
 import (
-	"log"
 	"math"
 	"time"
 )
-
-func epoch_seconds(date time.Time) {
-
-}
 
 func Score(ups, downs int) int {
 	return ups - downs
@@ -49,7 +44,6 @@ func calculate(ups, down int) float64 {
 
 	phat := float64(ups) / n
 
-	log.Println(math.Sqrt(phat+z*z/(2*n)-z*((phat*(1-phat)+z*z/(4*n))/n)) / (1 + z*z/n))
 	return math.Sqrt(phat+z*z/(2*n)-z*((phat*(1-phat)+z*z/(4*n))/n)) / (1 + z*z/n)
 }
 
