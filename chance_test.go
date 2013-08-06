@@ -23,7 +23,7 @@ func TestScore(t *testing.T) {
 		score := chance.Score(testdata.ups, testdata.downs)
 
 		if score != testdata.expected {
-			t.Errorf("Expexted %d from score(%d,%d)", testdata.expected, testdata.ups, testdata.downs)
+			t.Errorf("Expected %d from score(%d,%d)", testdata.expected, testdata.ups, testdata.downs)
 		}
 	}
 }
@@ -64,10 +64,10 @@ var testConfidenceTable = []struct {
 
 func TestConfidence(t *testing.T) {
 	for _, testdata := range testConfidenceTable {
-		score := chance.Confidence(testdata.ups, testdata.downs)
+		confidence := chance.Confidence(testdata.ups, testdata.downs)
 
-		if score != testdata.expected {
-			t.Errorf("Expexted %d from confidence(%d,%d)", testdata.expected, testdata.ups, testdata.downs)
+		if confidence != testdata.expected {
+			t.Errorf("Expected %d from confidence(%d,%d)", testdata.expected, testdata.ups, testdata.downs)
 		}
 	}
 }
